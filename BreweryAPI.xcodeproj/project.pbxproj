@@ -16,6 +16,7 @@
 		8564E2822C008F4C004D65A4 /* BreweryAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564E2812C008F4C004D65A4 /* BreweryAPIUITestsLaunchTests.swift */; };
 		8564E2902C0090DA004D65A4 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564E28F2C0090DA004D65A4 /* ApiResult.swift */; };
 		8564E2932C009193004D65A4 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564E2922C009193004D65A4 /* ApiManager.swift */; };
+		8564E2962C009735004D65A4 /* BreweryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564E2952C009735004D65A4 /* BreweryDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8564E2812C008F4C004D65A4 /* BreweryAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8564E28F2C0090DA004D65A4 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
 		8564E2922C009193004D65A4 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		8564E2952C009735004D65A4 /* BreweryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		8564E2632C008F49004D65A4 /* BreweryAPI */ = {
 			isa = PBXGroup;
 			children = (
+				8564E2942C00971D004D65A4 /* Views */,
 				8564E2912C009160004D65A4 /* Managers */,
 				8564E28E2C0090C3004D65A4 /* Models */,
 				8564E2642C008F49004D65A4 /* BreweryAPIApp.swift */,
@@ -147,6 +150,14 @@
 				8564E2922C009193004D65A4 /* ApiManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		8564E2942C00971D004D65A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8564E2952C009735004D65A4 /* BreweryDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8564E2962C009735004D65A4 /* BreweryDetailView.swift in Sources */,
 				8564E2932C009193004D65A4 /* ApiManager.swift in Sources */,
 				8564E2902C0090DA004D65A4 /* ApiResult.swift in Sources */,
 				8564E2672C008F49004D65A4 /* ContentView.swift in Sources */,

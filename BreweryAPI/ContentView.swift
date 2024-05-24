@@ -15,21 +15,27 @@ struct ContentView: View {
     @ObservedObject var apiManager = ApiManager.shared
     
     var body: some View {
-        VStack {
-            TextField("Enter Search Item", text: $search)
-                .onChange(of: search) { oldValue, newValue in
-                    print("New value is: \(newValue)")
-                    apiManager.searchFor(query: newValue) { results in
-                        self.results = results
-                    }
+        NavigationStack {
+            VStack {
+                Form {
+                    TextField("Enter Search Item", text: $search)
+                        .onChange(of: search) { oldValue, newValue in
+                            print("New value is: \(newValue)")
+                            apiManager.searchFor(query: newValue) { results in
+                                self.results = results
+                            }
+                        }
                 }
-        }
-        
-        Text("API Results:")
-        
-        ForEach(results, id:\.id) { result in
-            Text("\(result.name)")
-            
+                    List {
+                        
+                        ForEach(results, id:\.id) { result in
+                            NavigationLink("\(result.name)") {
+                                BreweryDetailView(breweryId: result.id)
+                            }
+                        }
+                    }
+                    .navigationTitle("Brewery API")
+            }
         }
     }
 }
